@@ -284,6 +284,11 @@ select.ui-input option{background:#000;color:#fff}
 .shop-frow{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
 .shop-fgroup{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .shop-fgroup>.ui-meta{margin-right:4px}
+.shop-fsel{height:44px;width:auto;min-width:176px;font-size:14px;padding-left:16px;padding-right:40px}
+.shop-fsw i{width:32px;height:32px}
+.shop-fsw[aria-pressed="true"] i{box-shadow:0 0 0 2px #000,0 0 0 4px #fff}
+.shop-fright{display:flex;align-items:center;gap:24px;margin-left:auto;flex-wrap:wrap}
+.ui-modal .shop-fright{margin-left:0;flex-direction:column;align-items:stretch}
 .shop-active{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .shop-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .shop-card{position:relative;display:flex;flex-direction:column;gap:8px;min-width:0}
@@ -293,7 +298,9 @@ select.ui-input option{background:#000;color:#fff}
 .shop-media .shop-hov{opacity:0}
 @media (hover:hover) and (pointer:fine){.shop-card:hover .shop-hov{opacity:1}}
 .shop-tag{position:absolute;left:12px;top:12px;z-index:2;background:#F4F4F2;color:#000;font-size:12px;padding:4px 8px;line-height:1.2}
-.shop-fav{position:absolute!important;right:4px;top:4px;z-index:3;color:#000}
+.shop-fav{position:absolute!important;right:4px;top:4px;z-index:3;color:#000!important;opacity:1!important}
+.shop-fav svg{width:24px;height:24px;stroke:#000!important;stroke-width:1.75}
+.shop-fav[aria-pressed="true"] svg{fill:#000}
 .shop-fav:focus-visible{outline-color:#000!important}
 .shop-card-name a::after{content:"";position:absolute;left:0;right:0;top:0;aspect-ratio:4/3;z-index:1}
 .shop-card-name{font-size:15px;font-weight:500}
@@ -3641,7 +3648,7 @@ function footerHTML() {
       <h2 class="ui-h2">Enterate primero de cada drop</h2>
       <form data-form="news" novalidate aria-label="Suscribirme al newsletter">
         ${T.field({ id: 'news-mail', label: 'Tu mail', type: 'email', ac: 'email', v: 'email' })}
-        <button type="submit" class="ui-btn" style="margin-top:29px">Suscribirme</button>
+        <button type="submit" class="ui-btn" style="margin-top:29px;font-size:14px!important;padding:0 32px">Suscribirme</button>
       </form>
       <div data-news-msg aria-live="polite" style="grid-column:1/-1"></div>
     </div>
@@ -4490,10 +4497,12 @@ const qs = o => { const p = Object.entries(o).filter(([, v]) => v !== '' && v !=
 function shopHash(f, patch) { const o = Object.assign({ tipo: f.tipos, color: f.colors, stock: f.stock ? '1' : '', orden: f.orden === 'destacados' ? '' : f.orden }, patch || {}); return '/tienda' + qs(o); }
 function controls(f, pre) {
   return `<div class="shop-frow">
-    <div class="shop-fgroup" role="group" aria-labelledby="${pre}t"><span class="ui-meta" id="${pre}t">Tipo</span>${ORDER.map(k => `<button type="button" class="ui-chip" data-act="f-tipo" data-k="${k}" data-fk="${pre}tipo-${k}" aria-pressed="${f.tipos.includes(k)}">${T.P(k).tipoPl}</button>`).join('')}</div>
-    <div class="shop-fgroup" role="group" aria-labelledby="${pre}c"><span class="ui-meta" id="${pre}c">Color</span>${Object.keys(DATA.colors).map(k => `<button type="button" class="ui-chip" data-act="f-color" data-k="${k}" data-fk="${pre}color-${k}" aria-pressed="${f.colors.includes(k)}"><i aria-hidden="true" style="width:12px;height:12px;border-radius:50%;border:1px solid #8C8C8C;background:${DATA.colors[k].hex}"></i>${T.cl(k)}</button>`).join('')}</div>
+    <div class="shop-fgroup"><label class="ui-meta" for="${pre}tipo">Tipo</label><select class="ui-input shop-fsel" id="${pre}tipo" data-fk="${pre}tipo" data-tipo><option value="">Todos</option>${ORDER.map(k => `<option value="${k}"${f.tipos.length === 1 && f.tipos[0] === k ? ' selected' : ''}>${T.P(k).tipoPl}</option>`).join('')}</select></div>
+    <div class="shop-fgroup" role="group" aria-labelledby="${pre}c" style="gap:4px"><span class="ui-meta" id="${pre}c">Color</span>${Object.keys(DATA.colors).map(k => `<button type="button" class="ui-sw shop-fsw" data-act="f-color" data-k="${k}" data-fk="${pre}color-${k}" aria-pressed="${f.colors.includes(k)}" aria-label="${esc(T.cl(k))}" title="${esc(T.cl(k))}"><i style="background:${DATA.colors[k].hex}"></i></button>`).join('')}</div>
+    <div class="shop-fright">
     <label class="ui-switch" style="gap:12px"><span>Solo con stock</span><input type="checkbox" data-act="f-stock" data-fk="${pre}stock"${f.stock ? ' checked' : ''}></label>
-    <div class="ui-row" style="gap:8px"><label class="ui-meta" for="${pre}orden">Ordenar</label><select class="ui-input" id="${pre}orden" data-fk="${pre}orden" data-orden style="height:44px;width:auto">${[['destacados', 'Destacados'], ['precio-asc', 'Menor precio'], ['precio-desc', 'Mayor precio'], ['novedades', 'Novedades']].map(([v, l]) => `<option value="${v}"${f.orden === v ? ' selected' : ''}>${l}</option>`).join('')}</select></div>
+    <div class="ui-row" style="gap:8px"><label class="ui-meta" for="${pre}orden">Ordenar</label><select class="ui-input shop-fsel" id="${pre}orden" data-fk="${pre}orden" data-orden>${[['destacados', 'Destacados'], ['precio-asc', 'Menor precio'], ['precio-desc', 'Mayor precio'], ['novedades', 'Novedades']].map(([v, l]) => `<option value="${v}"${f.orden === v ? ' selected' : ''}>${l}</option>`).join('')}</select></div>
+    </div>
   </div>`;
 }
 const curF = () => filterProducts(T.cur.q || {});
@@ -4503,6 +4512,7 @@ T.acts['f-color'] = el => { const f = curF(); T.go(shopHash(f, { color: toggleIn
 T.acts['f-stock'] = el => { const f = curF(); T.go(shopHash(f, { stock: el.checked ? '1' : '' })); syncSheet(); };
 T.acts['f-clear'] = () => { T.go('/tienda'); syncSheet(); };
 T.acts['f-rm'] = el => { const f = curF(); const [k, v] = el.dataset.k.split(':'); const patch = k === 'tipo' ? { tipo: f.tipos.filter(x => x !== v) } : k === 'color' ? { color: f.colors.filter(x => x !== v) } : { stock: '' }; T.go(shopHash(f, patch)); };
+document.addEventListener('change', e => { if (e.target.matches && e.target.matches('[data-tipo]')) { const f = curF(); T.go(shopHash(f, { tipo: e.target.value ? [e.target.value] : [] })); syncSheet(); } });
 document.addEventListener('change', e => { if (e.target.matches && e.target.matches('[data-orden]')) { const f = curF(); T.go(shopHash(f, { orden: e.target.value === 'destacados' ? '' : e.target.value })); syncSheet(); } });
 let sheetEl = null;
 function syncSheet() {
