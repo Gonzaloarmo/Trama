@@ -35,3 +35,7 @@ trama/
 - Tarjeta rechazada: `4000 0000 0000 0002`
 
 Cualquier vencimiento futuro y código de seguridad de 3 dígitos.
+
+## Idioma
+
+El sitio abre en inglés. El botón circular ES / EN del menú cambia al español y la elección se guarda en `localStorage` (`trama-lang`). Los textos fuente están en español y la traducción se aplica en el navegador desde el diccionario incluido en `index.html`.

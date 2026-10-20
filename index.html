@@ -1,23 +1,1051 @@
 <!DOCTYPE html>
-<html lang="es-AR">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TRAMA — Gorras, pilusos y gorros</title>
-<meta name="description" content="Gorras, pilusos y gorros lavados y desgastados a mano en Buenos Aires. Proyecto de portfolio.">
+<title>TRAMA — Caps, bucket hats and beanies</title>
+<meta name="description" content="Caps, bucket hats and beanies washed and distressed by hand in Buenos Aires. Portfolio project.">
 <meta name="theme-color" content="#000000">
+<script>
+/* TRAMA · i18n: English by default, Spanish source. Translates rendered text + attributes at runtime. */
+(function () {
+  if (window.__tramaI18n) return; window.__tramaI18n = 1;
+  var KEY = 'trama-lang';
+  var lang = 'en'; try { lang = localStorage.getItem(KEY) || 'en'; } catch (e) {}
+  var RAW = `
+TRAMA — Colección Archivo => TRAMA — Archive Collection
+Tres siluetas, una misma trama. => Three silhouettes, one weave.
+Gorra Trama => Trama Cap
+Piluso Trama => Trama Bucket Hat
+Gorro Trama => Trama Beanie
+Algodón lavado, visera deshilachada, cierre de metal. => Washed cotton, frayed brim, metal buckle.
+Ala corta, algodón lavado. Se dobla y entra en el bolsillo. => Short brim, washed cotton. Folds up and fits in your pocket.
+Tejido acanalado, puño doblado y etiqueta con la marca. => Ribbed knit, folded cuff and a woven brand label.
+Cada costura queda a la vista. => Every seam stays visible.
+Algodón lavado y desgastado pieza por pieza, bordados en hilo crudo y etiquetas tejidas con la marca. => Cotton washed and distressed piece by piece, embroidered in natural thread, with woven brand labels.
+“La uso todos los días y el bordado sigue intacto.” => “I wear it every day and the embroidery is still intact.”
+“El piluso entró en la mochila doblado y salió sin una marca.” => “The bucket hat went into my backpack folded and came out without a crease.”
+“El gorro blanco es el que más me piden prestado.” => “The white beanie is the one people ask to borrow the most.”
+[ Agregar al carrito ] => [ Add to cart ]
+Agregar al carrito => Add to cart
+Envíos a todo el país. Cambios dentro de los 30 días. => Nationwide shipping. Exchanges within 30 days.
+Colección => Collection
+Colección Archivo => Archive Collection
+Colección Archivo 01 => Archive Collection 01
+Bajá para ver la pieza => Scroll down to see the piece
+Política de privacidad => Privacy policy
+Botón de arrepentimiento => Withdrawal button
+Tienda de muestra · Proyecto de portfolio. No se realizan compras reales. => Sample store · Portfolio project. No real purchases are made.
+Galería de la colección => Collection gallery
+Ver Gorra Trama => View Trama Cap
+Ver Piluso Trama blanco crudo => View off-white Trama Bucket Hat
+Ver Gorro Trama blanco crudo => View off-white Trama Beanie
+Modelo con gorra Trama negra lavada y desgastada, bordado gris y visera deshilachada => Model wearing a washed, distressed black Trama cap with gray embroidery and a frayed brim
+Modelo sentado con piluso Trama crudo desgastado, bordado negro => Seated model wearing a distressed off-white Trama bucket hat with black embroidery
+Modelo con gorro Trama blanco de lana acanalada y etiqueta negra con la marca => Model wearing a white ribbed wool Trama beanie with a black brand label
+Gorra Trama cruda desgastada con bordado TRAMA en hilo negro, vista frontal => Distressed off-white Trama cap with TRAMA embroidered in black thread, front view
+Volver arriba => Back to top
+Principal => Main
+Abrir menú => Open menu
+Ver la colección Archivo Trama 01 => View the Trama Archive 01 collection
+Ver el drop => View the drop
+Modelo con gorra Trama negra desgastada, bordado blanco => Model wearing a distressed black Trama cap with white embroidery
+Modelo visto desde arriba con piluso Trama negro desgastado, bordado blanco => Model seen from above wearing a distressed black Trama bucket hat with white embroidery
+Modelo en contrapicado con gorro Trama blanco de lana acanalada => Low-angle shot of a model wearing a white ribbed wool Trama beanie
+Modelo de perfil con gorra Trama gris oscuro lavada, bordado tono sobre tono => Model in profile wearing a washed dark gray Trama cap with tone-on-tone embroidery
+Modelo con piluso Trama negro desgastado, bordado crudo => Model wearing a distressed black Trama bucket hat with off-white embroidery
+Modelo acomodándose el gorro Trama negro de lana con etiqueta cruda => Model adjusting a black wool Trama beanie with an off-white label
+Modelo de perfil con gorra Trama cruda desgastada, bordado negro => Model in profile wearing a distressed off-white Trama cap with black embroidery
+Modelo con gorra Trama negra desgastada, bordado blanco, sobre fondo gris claro => Model wearing a distressed black Trama cap with white embroidery, on a light gray background
+Modelo con piluso Trama negro desgastado, bordado crudo, sobre fondo gris claro => Model wearing a distressed black Trama bucket hat with off-white embroidery, on a light gray background
+Modelo con gorro Trama blanco de lana acanalada y etiqueta negra, sobre fondo gris claro => Model wearing a white ribbed wool Trama beanie with a black label, on a light gray background
+Gorras, pilusos y gorros hechos en Buenos Aires. Mirá la pieza girar. => Caps, bucket hats and beanies made in Buenos Aires. Watch the piece turn.
+Gorras, pilusos y gorros hechos en Buenos Aires. Bajá y el modelo gira para mostrarte la pieza de costado. => Caps, bucket hats and beanies made in Buenos Aires. Scroll down and the model turns to show you the piece from the side.
+Algo salió mal => Something went wrong
+No pudimos mostrar esta página. Volvé a intentar en unos segundos. => We couldn't load this page. Try again in a few seconds.
+Compra segura => Secure checkout
+Volver al carrito => Back to cart
+Enterate primero de cada drop => Hear about every drop first
+Preferencias de cookies => Cookie preferences
+TRAMA Indumentaria S.R.L. (razón social de ejemplo) · CUIT 30-00000000-0 (de ejemplo) · Buenos Aires, Argentina => TRAMA Indumentaria S.R.L. (sample company name) · CUIT 30-00000000-0 (sample) · Buenos Aires, Argentina
+TRAMA Indumentaria S.R.L. (razón social de ejemplo) · CUIT 30-00000000-0 (de ejemplo) => TRAMA Indumentaria S.R.L. (sample company name) · CUIT 30-00000000-0 (sample)
+Este mail ya está en la lista. => This email is already on the list.
+Listo. Te escribimos antes del próximo drop. Tu código BIENVENIDA15 ya está activo. => Done. We'll write before the next drop. Your code BIENVENIDA15 is now active.
+Próximo drop => Next drop
+Seguir mi pedido => Track my order
+Usamos cookies para que el sitio funcione y para entender cómo lo usás. => We use cookies to make the site work and to understand how you use it.
+Aceptar todas => Accept all
+Solo las necesarias => Necessary only
+Configurar => Settings
+Elegí qué cookies aceptás. Podés cambiarlo cuando quieras desde la página de cookies. => Choose which cookies you accept. You can change this anytime from the cookies page.
+Necesarias => Necessary
+Hacen que el carrito, la sesión y el checkout funcionen. Siempre activas. => They make the cart, your session and checkout work. Always on.
+Siempre activas => Always on
+Preferencias => Preferences
+Recuerdan tus búsquedas y tu código postal. => They remember your searches and your postal code.
+Medición => Analytics
+Nos ayudan a entender qué páginas se usan más, sin identificarte. => They help us understand which pages are used most, without identifying you.
+Guardar elección => Save choice
+Saltar al contenido => Skip to content
+TRAMA, ir al inicio => TRAMA, go to home
+Buscar => Search
+TRAMA, salir del checkout e ir al inicio => TRAMA, leave checkout and go to home
+Suscribirme al newsletter => Subscribe to the newsletter
+Suscribirme => Subscribe
+Medios de pago => Payment methods
+Menú => Menu
+Cerrar menú => Close menu
+Menú principal => Main menu
+Cerrar => Close
+Foto anterior => Previous photo
+Foto siguiente => Next photo
+Ruta de navegación => Breadcrumb
+Lavar a mano en agua fría. Secar a la sombra, sin escurrir. No usar secarropas. => Hand wash in cold water. Dry in the shade, without wringing. Do not tumble dry.
+Secar en plano para que no se estire. => Dry flat so it doesn't stretch.
+Negro => Black
+Blanco crudo => Off-white
+Gris => Gray
+Dad cap de algodón lavado y desgastado pieza por pieza. Visera curva deshilachada y logo bordado en hilo crudo. => Dad cap in cotton washed and distressed piece by piece. Curved frayed brim and logo embroidered in natural thread.
+Ajustable con hebilla, de 54 a 60 cm => Adjustable buckle, 54 to 60 cm
+Piluso de algodón lavado, ala corta y bordado al frente. Se dobla y entra en el bolsillo. => Washed cotton bucket hat with a short brim and front embroidery. Folds up and fits in your pocket.
+Calza de 56 a 58 cm => Fits 56 to 58 cm
+Gorro de tejido acanalado grueso con puño doblado y etiqueta tejida con la marca. => Chunky ribbed-knit beanie with a folded cuff and a woven brand label.
+Tejido elástico, de 54 a 60 cm => Stretch knit, 54 to 60 cm
+Mezcla de lana y acrílico en tejido acanalado grueso. Puño doblado. Etiqueta tejida cosida al frente. => Wool and acrylic blend in a chunky rib knit. Folded cuff. Woven label stitched on the front.
+Modelo con gorra Trama negra lavada y desgastada, bordado gris => Model wearing a washed, distressed black Trama cap with gray embroidery
+Modelo con gorra Trama negra desgastada sobre fondo gris claro => Model wearing a distressed black Trama cap on a light gray background
+Gorra Trama blanca cruda desgastada con bordado en hilo negro => Distressed off-white Trama cap embroidered in black thread
+Modelo de perfil con gorra Trama blanca cruda desgastada, bordado negro => Model in profile wearing a distressed off-white Trama cap with black embroidery
+Modelo de perfil con gorra Trama gris lavada, bordado tono sobre tono => Model in profile wearing a washed gray Trama cap with tone-on-tone embroidery
+Modelo visto desde arriba con piluso Trama negro desgastado => Model seen from above wearing a distressed black Trama bucket hat
+Modelo con piluso Trama negro sobre fondo gris claro => Model wearing a black Trama bucket hat on a light gray background
+Modelo con piluso Trama blanco crudo desgastado, bordado negro => Model wearing a distressed off-white Trama bucket hat with black embroidery
+Modelo con gorro Trama negro de lana acanalada y etiqueta cruda => Model wearing a black ribbed wool Trama beanie with an off-white label
+Modelo con gorro Trama blanco de lana acanalada => Model wearing a white ribbed wool Trama beanie
+Modelo con gorro Trama blanco de lana y etiqueta negra con la marca => Model wearing a white wool Trama beanie with a black brand label
+Modelo con gorro Trama blanco sobre fondo gris claro => Model wearing a white Trama beanie on a light gray background
+Envío estándar a domicilio => Standard home delivery
+Te lo lleva un correo a tu puerta. Seguimiento por mail. => A courier brings it to your door. Tracking by email.
+Envío express => Express shipping
+Solo para códigos postales de AMBA (1000 a 1999). => Only for AMBA postal codes (1000 to 1999).
+Retiro en punto de entrega => Pickup point
+Lo retirás en un comercio cerca tuyo, con tu DNI. => Pick it up at a store near you with your ID.
+Retiro en showroom Palermo => Pickup at Palermo showroom
+Con cita previa. Te escribimos para coordinar el día cuando el pedido esté listo. => By appointment. We'll write to set a day when the order is ready.
+Gurruchaga 1650, Palermo, CABA (dirección de ejemplo) => Gurruchaga 1650, Palermo, CABA (sample address)
+Lunes a viernes de 11 a 19 h. Sábados de 11 a 15 h. => Monday to Friday 11 am to 7 pm. Saturdays 11 am to 3 pm.
+Ciudad Autónoma de Buenos Aires => City of Buenos Aires
+La uso todos los días => I wear it every day
+La uso todos los días y el bordado sigue intacto. El desgaste se ve todavía mejor después de un par de lavados. => I wear it every day and the embroidery is still intact. The distressing looks even better after a couple of washes.
+Calce perfecto => Perfect fit
+Tengo la cabeza grande y con la hebilla me queda bien sin apretar. La visera ya viene curva. => I have a big head and with the buckle it fits well without squeezing. The brim comes pre-curved.
+Mejor que en las fotos => Better than in the photos
+El negro lavado tiene un gris lindo en las costuras. Llegó en tres días a Caballito. => The washed black has a nice gray on the seams. It arrived in Caballito in three days.
+Muy buena, tardó un poco => Very good, took a while
+La gorra es impecable. A Rosario tardó seis días hábiles, dentro de lo que decía la web. => The cap is flawless. It took six business days to Rosario, within what the site said.
+La retiré en el showroom => Picked it up at the showroom
+Pude ver los tres colores antes de elegir. Me llevé la cruda y no me arrepiento. => I could see all three colors before choosing. I took the off-white one and have no regrets.
+Linda, pero la quería gris => Nice, but I wanted it in gray
+Se agotó la gris así que me llevé la negra. Igual muy conforme con la calidad. => The gray sold out so I took the black. Still very happy with the quality.
+Regalo acertado => Great gift
+Se la regalé a mi hermano y la usa más que cualquier otra. Viene en una bolsa de tela muy prolija. => I gave it to my brother and he wears it more than any other. It comes in a very neat cloth bag.
+Entra en la mochila => Fits in a backpack
+El piluso entró en la mochila doblado y salió sin una marca. => The bucket hat went into my backpack folded and came out without a crease.
+Ala corta, como lo buscaba => Short brim, just what I wanted
+Es más chico que otros pilusos, así que no tapa la cara. Me queda un poco justo con el pelo atado. => It's smaller than other bucket hats, so it doesn't cover your face. A bit snug with my hair tied up.
+Para el verano => For summer
+Liviano y fresco. Lo lavé a mano dos veces y no perdió la forma. => Light and cool. I hand washed it twice and it kept its shape.
+Muy buena tela => Great fabric
+Se nota el algodón grueso. El bordado del frente es chico y prolijo. => You can feel the heavy cotton. The front embroidery is small and neat.
+Lindo color crudo => Nice off-white color
+El blanco crudo es más cálido de lo que esperaba y combina con todo. Se ensucia un poco rápido. => The off-white is warmer than I expected and goes with everything. It gets dirty a bit fast.
+Llegó rápido => Arrived fast
+Pedí el lunes y el jueves lo tenía en Mar del Plata. Muy bien embalado. => I ordered on Monday and had it in Mar del Plata by Thursday. Very well packed.
+El que más me piden prestado => The one people borrow the most
+El gorro blanco es el que más me piden prestado. Abriga y no pica. => The white beanie is the one people ask to borrow the most. It's warm and doesn't itch.
+Abriga en serio => Seriously warm
+Lana gruesa. El puño doblado cubre bien las orejas. => Thick wool. The folded cuff covers the ears well.
+Se estira un poco => Stretches a little
+Después de un mes de uso cedió un poco. Secándolo en plano volvió bastante a su forma. => After a month of use it gave a little. Drying it flat brought it mostly back to shape.
+La etiqueta queda muy bien => The label looks great
+La etiqueta tejida es lo que lo hace distinto. Muy buena calidad. => The woven label is what makes it different. Very good quality.
+Quería el blanco => I wanted the white one
+El blanco estaba agotado, me llevé el negro y está perfecto. Ojalá vuelva el crudo. => The white was sold out, I took the black and it's perfect. I hope the off-white comes back.
+Guardado en favoritos => Saved to favorites
+Quitado de favoritos => Removed from favorites
+Quitar de favoritos => Remove from favorites
+Agregar a favoritos => Add to favorites
+Correo Andreani (ejemplo) => Andreani courier (sample)
+BIENVENIDA15 es solo para tu primera compra. => BIENVENIDA15 is only for your first purchase.
+Este código se activa con el drop TRAMA 02. => This code activates with the TRAMA 02 drop.
+Ese código no existe o ya venció. Revisá cómo lo escribiste. => That code doesn't exist or has expired. Check how you typed it.
+Sin costo => Free
+Salir sin guardar => Leave without saving
+Seguir editando => Keep editing
+¿Salir del checkout? Tu carrito queda guardado. => Leave checkout? Your cart stays saved.
+Salir del checkout => Leave checkout
+Seguir comprando => Keep shopping
+Todos los productos => All products
+Centro de ayuda => Help center
+Cambios y devoluciones => Exchanges and returns
+Guía de talles => Size guide
+Términos y condiciones => Terms and conditions
+Política de cambios => Exchange policy
+Ingresá tu mail. => Enter your email.
+Completá este campo. => Fill in this field.
+Escribilo completo, con al menos 2 letras. => Write it in full, at least 2 letters.
+Revisá un campo antes de seguir: => Check one field before continuing:
+Aviso de cookies => Cookie notice
+Guardamos tu elección de cookies => We saved your cookie choice
+Configurar cookies => Cookie settings
+Estás sin conexión. Podés seguir mirando, pero no vas a poder comprar hasta que vuelva. => You're offline. You can keep browsing, but you won't be able to buy until you're back online.
+Volviste a estar en línea => You're back online
+Avisame cuando vuelva => Notify me when it's back
+Solo con stock => In stock only
+TRAMA 02 ya salió => TRAMA 02 is out
+Próximo drop · TRAMA 02 => Next drop · TRAMA 02
+Limpiar filtros => Clear filters
+No hay piezas con esos filtros. => No pieces match those filters.
+Archivo 01 => Archive 01
+La primera colección de TRAMA: tres piezas de algodón y lana lavadas y desgastadas a mano en Buenos Aires. Cada una sale del taller con marcas propias, así que no hay dos iguales. => TRAMA's first collection: three cotton and wool pieces washed and distressed by hand in Buenos Aires. Each one leaves the workshop with its own marks, so no two are alike.
+Una pieza nueva y dos colores. Unidades limitadas. => One new piece in two colors. Limited units.
+Avisame cuando salga => Notify me when it drops
+Estás en la lista. Te escribimos una hora antes de que salga. => You're on the list. We'll write one hour before it drops.
+Buscar productos => Search products
+Búsquedas recientes => Recent searches
+Lo más buscado => Most searched
+Enter para ver todos los resultados. => Press Enter to see all results.
+Probá con => Try
+Puede interesarte => You might like
+Todavía no guardaste nada. => You haven't saved anything yet.
+Ir a la tienda => Go to the shop
+Tus favoritos se guardan en este navegador. Ingresá para tenerlos en todos tus dispositivos. => Your favorites are saved in this browser. Sign in to have them on all your devices.
+Cómo medirte => How to measure
+Rango de calce de cada pieza => Fit range for each piece
+Calculá tu talle => Find your size
+En revisión => Under review
+Solo vos ves esta reseña hasta que la revisemos. => Only you can see this review until we check it.
+¿Te sirvió? => Was this helpful?
+No hay reseñas con ese filtro. => No reviews match that filter.
+Ver más reseñas => See more reviews
+Tu puntuación => Your rating
+Foto (opcional) => Photo (optional)
+Enviar reseña => Submit review
+Gracias. Tu reseña se publica después de revisarla. => Thanks. Your review will be published after we check it.
+Así se usa => How it's worn
+Talle único => One size
+Comprar ahora => Buy now
+Cambios sin cargo por 30 días => Free exchanges for 30 days
+Calculá el envío => Estimate shipping
+Completá el look => Complete the look
+Reseñas => Reviews
+Escribir una reseña => Write a review
+Filtros activos => Active filters
+Elegir pieza => Choose piece
+Cerrar búsqueda => Close search
+Resultados => Results
+Puntuación de 1 a 5 estrellas => Rating from 1 to 5 stars
+Vista previa de tu foto => Preview of your photo
+Girar producto => Rotate product
+Restar uno => Remove one
+Sumar uno => Add one
+Beneficios => Benefits
+Distribución de puntuaciones => Rating distribution
+Filtrar reseñas => Filter reviews
+Menor precio => Lowest price
+Mayor precio => Highest price
+Destacados => Featured
+Novedades => New in
+Más vendidos => Best sellers
+Ordenar => Sort
+Tipo => Type
+Todos => All
+Todas => All
+Color => Color
+Filtrar y ordenar => Filter and sort
+Filtrar => Filter
+Gorra negra => Black cap
+Agregado al carrito => Added to cart
+Rodeá la cabeza con un centímetro, un dedo arriba de las cejas y de las orejas. => Wrap a tape measure around your head, one finger above your eyebrows and ears.
+Mantené la cinta firme, pero sin apretar. => Keep the tape firm, but not tight.
+Anotá la medida en centímetros. => Write down the measurement in centimeters.
+Tu medida en cm => Your measurement in cm
+Por ejemplo: 57 => For example: 57
+Puede quedarte grande => It may be loose
+Te queda justo => Snug fit
+Te queda bien => Good fit
+Entrás en el rango y la hebilla te deja ajustarla. => You're within the range and the buckle lets you adjust it.
+Entrás en el rango y el tejido se adapta. => You're within the range and the knit adapts.
+Foto de la reseña => Review photo
+Escribí un título corto para tu reseña. => Write a short title for your review.
+Color que compraste => Color you bought
+La imagen pesa más de 5 MB. Elegí una más liviana. => The image is larger than 5 MB. Choose a lighter one.
+Medidas y calce => Measurements and fit
+Envíos y cambios => Shipping and exchanges
+Envíos a todo el país en 3 a 6 días hábiles. Cambios sin cargo dentro de los 30 días, con la pieza sin uso y con su etiqueta. => Nationwide shipping in 3 to 6 business days. Free exchanges within 30 days, with the piece unused and with its label.
+Esa es toda la cantidad disponible en este color. => That's all we have in this color.
+Podés llevar hasta 10 por pedido. => You can buy up to 10 per order.
+Código postal => Postal code
+Con foto => With photo
+Más recientes => Most recent
+Mejor puntuadas => Highest rated
+Peor puntuadas => Lowest rated
+Tu carrito está vacío => Your cart is empty
+Código de descuento => Discount code
+Aplicar => Apply
+Envío => Shipping
+Subtotal => Subtotal
+Total => Total
+Descuento => Discount
+Ir a pagar => Checkout
+Estás sin conexión. Vas a poder pagar cuando vuelva. => You're offline. You'll be able to pay when you're back online.
+(completo, editar) => (complete, edit)
+Tu pedido => Your order
+Recargo 6 cuotas (18%) => 6-installment surcharge (18%)
+¿Ya tenés cuenta? => Already have an account?
+Ingresá => Sign in
+Ingresar => Sign in
+Continuar al envío => Continue to shipping
+Dirección de entrega => Delivery address
+Usar otra dirección => Use another address
+Elegí el punto de retiro => Choose the pickup point
+Showroom Palermo => Palermo showroom
+Te escribimos para coordinar el día cuando el pedido esté listo. => We'll write to set a day when the order is ready.
+Cómo querés recibirlo => How you want to receive it
+Ingresá tu código postal para ver las opciones de envío. => Enter your postal code to see shipping options.
+Continuar al pago => Continue to payment
+Tienda de muestra: no ingreses datos reales. Usá la tarjeta de prueba 4242 4242 4242 4242, cualquier vencimiento futuro y cualquier código de 3 números. => Sample store: don't enter real data. Use the test card 4242 4242 4242 4242, any future expiry date and any 3-digit code.
+Medio de pago => Payment method
+Tarjeta de crédito o débito => Credit or debit card
+Visa, Mastercard y Amex. Hasta 3 cuotas sin interés con crédito. => Visa, Mastercard and Amex. Up to 3 interest-free installments with credit.
+Te llevamos a Mercado Pago para terminar el pago. => We'll take you to Mercado Pago to finish paying.
+Transferencia bancaria => Bank transfer
+Te mostramos los datos para transferir cuando confirmes. Tenés 48 horas para hacerlo. => We'll show you the transfer details when you confirm. You have 48 hours to do it.
+Tipo de tarjeta => Card type
+Crédito => Credit
+Débito => Debit
+¿Dónde está? => Where is it?
+Son los 3 números que están en el dorso de la tarjeta, al lado de la firma. En American Express son 4 números en el frente. => It's the 3 digits on the back of the card, next to the signature. On American Express it's 4 digits on the front.
+Es una simulación: no sale nada de este navegador. => It's a simulation: nothing leaves this browser.
+El 10% de descuento ya se ve en el resumen. => The 10% discount is already shown in the summary.
+Datos de facturación => Billing details
+Revisar el pedido => Review order
+Leí y acepto los => I have read and accept the
+y la => and the
+Estás sin conexión. Vas a poder confirmar la compra cuando vuelva. => You're offline. You'll be able to place the order when you're back online.
+Texto de ejemplo para un proyecto de portfolio. => Sample text for a portfolio project.
+Texto de ejemplo para un proyecto de portfolio => Sample text for a portfolio project
+Podés quitarla y seguir con el resto del pedido, o pedir que te avisemos cuando vuelva. => You can remove it and continue with the rest of the order, or ask us to let you know when it's back.
+Quitarla y seguir => Remove it and continue
+Conectando con Mercado Pago… => Connecting to Mercado Pago…
+Simulación de la pantalla de pago => Payment screen simulation
+Recargo 6 cuotas => 6-installment surcharge
+Datos para transferir => Transfer details
+TRAMA Indumentaria S.R.L. (ejemplo) => TRAMA Indumentaria S.R.L. (sample)
+CBU (de ejemplo) => CBU (sample)
+Importe exacto => Exact amount
+Tenés 48 horas para hacer la transferencia. Pasado ese plazo, el pedido se cancela y el stock se libera. => You have 48 hours to make the transfer. After that, the order is cancelled and the stock is released.
+Qué pasa ahora => What happens now
+Resumen del pedido => Order summary
+Guardá tus datos para la próxima => Save your details for next time
+Ya tenemos tu mail y tus datos. Elegí una contraseña y tu pedido queda en tu cuenta. => We already have your email and details. Choose a password and your order stays in your account.
+Crear mi cuenta => Create my account
+Volver a la tienda => Back to the shop
+Mínimo 8 caracteres => At least 8 characters
+Un número => One number
+Una mayúscula => One uppercase letter
+Cerrar carrito => Close cart
+Carrito => Cart
+Pasos de la compra => Checkout steps
+Direcciones guardadas => Saved addresses
+Escribí un código para aplicarlo. => Enter a code to apply it.
+Quitamos el código => Code removed
+Tenés envío gratis => You get free shipping
+Por seguridad, volvé a cargar los datos de la tarjeta. => For security, enter your card details again.
+Aplicamos el código => Code applied
+Tus datos · Checkout => Your details · Checkout
+Tus datos => Your details
+Ingresá tu nombre. => Enter your first name.
+Ingresá tu apellido. => Enter your last name.
+Para la factura. Solo números. => For the invoice. Numbers only.
+Quiero recibir novedades y avisos de drops => I want to receive news and drop alerts
+Ingresá la calle. => Enter the street.
+Ingresá el número de la calle. Si no tiene, escribí S/N. => Enter the street number. If there isn't one, write S/N.
+Ingresá la localidad. => Enter the city.
+Elegí la provincia. => Choose the province.
+Elegí una provincia => Choose a province
+Guardar esta dirección en mi cuenta => Save this address to my account
+Indicaciones para el repartidor => Delivery instructions
+Hasta 120 caracteres. Por ejemplo: timbre roto, llamar al llegar. => Up to 120 characters. For example: doorbell broken, call on arrival.
+Elegí cómo querés recibir el pedido. => Choose how you want to receive the order.
+Escribí el vencimiento como MM/AA, por ejemplo 08/28. => Write the expiry as MM/YY, for example 08/28.
+El mes tiene que estar entre 01 y 12. => The month has to be between 01 and 12.
+La tarjeta está vencida. Usá otra tarjeta o elegí otro medio de pago. => The card has expired. Use another card or choose another payment method.
+Número de tarjeta => Card number
+Nombre como figura en la tarjeta => Name as shown on the card
+Escribí el nombre tal como aparece en la tarjeta. => Write the name exactly as it appears on the card.
+Código de seguridad => Security code
+Vencimiento => Expiry
+Cuotas => Installments
+La dirección de facturación es la misma que la de envío => The billing address is the same as the shipping address
+Nombre y apellido o razón social => Full name or company name
+Ingresá el nombre para la factura. => Enter the name for the invoice.
+Transferencia bancaria (10% de descuento) => Bank transfer (10% off)
+Tu carrito quedó vacío => Your cart is now empty
+Te avisamos cuando vuelva. La quitamos del pedido. => We'll let you know when it's back. We removed it from the order.
+La quitamos del pedido => We removed it from the order
+Tu banco rechazó el pago. Probá con otra tarjeta o elegí otro medio de pago. No se hizo ningún cargo. => Your bank declined the payment. Try another card or choose another payment method. You weren't charged.
+Retiro en showroom => Showroom pickup
+Te escribimos para coordinar => We'll write to coordinate
+Te mandamos el seguimiento => We'll send you tracking
+Pedido confirmado => Order confirmed
+Tu cuenta está lista => Your account is ready
+Por seguridad, esperá un minuto antes de volver a intentar. => For security, wait a minute before trying again.
+Olvidé mi contraseña => I forgot my password
+¿No tenés cuenta? Creá una => Don't have an account? Create one
+Demo: demo@trama.com / trama2026 => Demo: demo@trama.com / trama2026
+El mail o la contraseña no coinciden. Revisalos y volvé a intentar. => The email or password don't match. Check them and try again.
+Acepto los => I accept the
+Crear cuenta => Create account
+Ya tengo cuenta => I already have an account
+¿Querés ingresar? => Want to sign in?
+Te mandamos un link para crear una contraseña nueva. => We'll send you a link to create a new password.
+Enviar link => Send link
+Si hay una cuenta con ese mail, te mandamos un link para crear una contraseña nueva. Revisá también el correo no deseado. => If there's an account with that email, we sent you a link to create a new password. Check your spam folder too.
+Abrir el link del mail (demo) => Open the email link (demo)
+Guardar contraseña => Save password
+Listo, ya podés ingresar con tu contraseña nueva. => Done, you can now sign in with your new password.
+Cerrar sesión => Sign out
+← Mi cuenta => ← My account
+Tenés 15% de descuento en tu primera compra con BIENVENIDA15. => You get 15% off your first purchase with BIENVENIDA15.
+Seguir pedido => Track order
+Tu cuenta => Your account
+Mis pedidos => My orders
+Pedidos => Orders
+Direcciones => Addresses
+Favoritos => Favorites
+Ver detalle => View details
+No hay pedidos con ese estado. => No orders with that status.
+Todavía no hiciste ningún pedido. => You haven't placed any orders yet.
+COMPROBANTE DE MUESTRA · Proyecto de portfolio. No es una factura válida ni corresponde a una compra real. => SAMPLE RECEIPT · Portfolio project. Not a valid invoice and not a real purchase.
+Descuento transferencia => Transfer discount
+Recargo cuotas => Installment surcharge
+Descargar factura => Download invoice
+Iniciar un cambio => Start an exchange
+Ya hay un cambio en curso para este pedido. => There's already an exchange in progress for this order.
+Volver a comprar => Buy again
+Ayuda con este pedido => Help with this order
+Agregar dirección => Add address
+Usar como predeterminada => Set as default
+Predeterminada => Default
+Todavía no guardaste direcciones. => You haven't saved any addresses yet.
+Guardar dirección => Save address
+Datos personales => Personal details
+Guardar cambios => Save changes
+Cambiar contraseña => Change password
+Eliminar mi cuenta => Delete my account
+Borramos tus datos personales, direcciones, favoritos, avisos y preferencias. Tus pedidos se conservan porque la ley nos obliga a guardar los comprobantes de venta, pero dejan de estar asociados a una cuenta. => We delete your personal details, addresses, favorites, alerts and preferences. Your orders are kept because the law requires us to store sales receipts, but they're no longer linked to an account.
+Avisos de stock => Stock alerts
+Ya hay stock => Back in stock
+Quitar aviso => Remove alert
+No tenés avisos activos. Podés pedir uno desde cualquier color agotado. => You have no active alerts. You can request one from any sold-out color.
+Mi cuenta => My account
+Cuenta => Account
+Filtrar por estado => Filter by status
+Ingresá tu contraseña. => Enter your password.
+Mantener la sesión iniciada => Keep me signed in
+Ya hay una cuenta con este mail. => There's already an account with this email.
+Recuperar contraseña => Recover password
+Nueva contraseña => New password
+Contraseña nueva => New password
+Contraseña => Password
+Repetí la contraseña => Repeat the password
+Repetí la contraseña nueva. => Repeat the new password.
+Repetí la contraseña nueva => Repeat the new password
+¿Cerrar sesión? => Sign out?
+Descargamos el comprobante de muestra => We downloaded the sample receipt
+Cambiamos la dirección predeterminada => Default address updated
+Editar dirección => Edit address
+Nombre de la dirección => Address name
+Poné un nombre, por ejemplo Casa o Trabajo. => Give it a name, for example Home or Work.
+Guardamos la dirección => Address saved
+Contraseña actual => Current password
+Ingresá tu contraseña actual. => Enter your current password.
+Para confirmar, escribí ELIMINAR => To confirm, type ELIMINAR
+¿Salir sin guardar los cambios? => Leave without saving changes?
+Ya hay otra cuenta con este mail. Usá uno distinto. => There's another account with this email. Use a different one.
+Guardamos tus datos => Details saved
+La contraseña actual no es correcta. Si no la recordás, cerrá sesión y usá “Olvidé mi contraseña”. => The current password is wrong. If you don't remember it, sign out and use “I forgot my password”.
+Cambiamos tu contraseña => Password changed
+Quitamos el aviso => Alert removed
+Newsletter => Newsletter
+Novedades y contenido de la marca, una vez por mes. => News and brand content, once a month.
+Avisos de drops => Drop alerts
+Un mail una hora antes de cada lanzamiento. => One email an hour before each release.
+El estado de tus pedidos. => The status of your orders.
+los avisos de drops => drop alerts
+los avisos por WhatsApp => WhatsApp alerts
+Gracias por avisarnos. => Thanks for letting us know.
+¿Te sirvió esta respuesta? => Was this answer helpful?
+Sí => Yes
+No => No
+Ir a Contacto => Go to Contact
+¿En qué te ayudamos? => How can we help?
+Acciones rápidas => Quick actions
+No encontramos una respuesta para eso. => We couldn't find an answer for that.
+¿No encontraste lo que buscabas? => Didn't find what you were looking for?
+Tenés la sesión iniciada. => You're signed in.
+Ver todos tus pedidos => See all your orders
+No encontramos un pedido con esos datos. Revisá el número en el mail de confirmación. => We couldn't find an order with those details. Check the number in the confirmation email.
+Buscar pedido => Find order
+Elegí el pedido => Choose the order
+Elegí las piezas => Choose the pieces
+Foto de la falla (opcional) => Photo of the defect (optional)
+Qué preferís => What you'd prefer
+Cambio por otro color => Exchange for another color
+Te mandamos la misma pieza en el color que elijas. => We'll send you the same piece in the color you choose.
+Crédito en la tienda => Store credit
+Lo usás en tu próxima compra, sin vencimiento. => Use it on your next purchase, no expiry.
+Reintegro al medio de pago original => Refund to the original payment method
+Puede tardar hasta 10 días hábiles en verse en tu resumen. => It can take up to 10 business days to show on your statement.
+No hay otros colores. => No other colors.
+Cómo nos lo mandás => How you'll send it
+Despacho en un punto de entrega => Drop off at a pickup point
+Te damos una etiqueta prepaga para pegar en el paquete. => We'll give you a prepaid label to stick on the package.
+Entrega en el showroom Palermo => Drop off at the Palermo showroom
+Confirmar el cambio => Confirm exchange
+Código de cambio => Exchange code
+Descargar etiqueta => Download label
+Copiar código => Copy code
+Embalá la pieza con su etiqueta. => Pack the piece with its label.
+Te avisamos cuando llegue. => We'll let you know when it arrives.
+Tenés 30 días desde la entrega. La pieza tiene que estar sin uso y con su etiqueta. => You have 30 days from delivery. The piece must be unused and have its label.
+Elegí al menos una pieza para cambiar. => Choose at least one piece to exchange.
+Recibimos tu pedido de arrepentimiento => We received your withdrawal request
+Código de trámite => Request code
+Guardá este código. Te escribimos dentro de las 24 horas con los pasos para devolver la pieza. => Keep this code. We'll write within 24 hours with the steps to return the piece.
+Volver al inicio => Back to home
+Podés revocar tu compra dentro de los 10 días corridos desde que la recibiste, sin dar motivos y sin costo. Te reintegramos el total al medio de pago que usaste. => You can cancel your purchase within 10 calendar days of receiving it, with no reason needed and at no cost. We refund the full amount to the payment method you used.
+Enviar pedido de arrepentimiento => Submit withdrawal request
+Arrepentimiento => Withdrawal
+Recibimos tu mensaje => We received your message
+Número de consulta => Inquiry number
+Volver a la ayuda => Back to help
+Antes de escribir, quizás te sirve: => Before you write, this might help:
+¿Cuánto tarda en llegar mi pedido? => How long does my order take to arrive?
+¿Cuánto tiempo tengo para cambiar? => How long do I have to exchange?
+¿Hay cuotas sin interés? => Are there interest-free installments?
+Adjuntar foto (opcional) => Attach photo (optional)
+Hasta 5 MB. => Up to 5 MB.
+Enviar mensaje => Send message
+Otros canales => Other channels
+WhatsApp · +54 9 11 0000-0000 (de ejemplo) => WhatsApp · +54 9 11 0000-0000 (sample)
+Instagram · @trama (de ejemplo) => Instagram · @trama (sample)
+hola@trama.com.ar (de ejemplo) => hola@trama.com.ar (sample)
+Atendemos de lunes a viernes de 10 a 18 h. => We're available Monday to Friday, 10 am to 6 pm.
+El sitio es operado por TRAMA Indumentaria S.R.L. (razón social de ejemplo), CUIT 30-00000000-0 (de ejemplo), con domicilio en la Ciudad Autónoma de Buenos Aires. Al comprar, aceptás estos términos. => The site is operated by TRAMA Indumentaria S.R.L. (sample company name), CUIT 30-00000000-0 (sample), based in the City of Buenos Aires. By purchasing, you accept these terms.
+Los precios están en pesos argentinos e incluyen IVA. Pueden cambiar sin aviso, pero respetamos el precio de los pedidos ya confirmados. Las unidades son limitadas: si una pieza se agota mientras comprás, te avisamos antes de cobrar. => Prices are in Argentine pesos and include VAT. They may change without notice, but we honor the price of orders already confirmed. Units are limited: if a piece sells out while you're shopping, we'll let you know before charging.
+Aceptamos tarjetas de crédito y débito, Mercado Pago y transferencia bancaria. Las transferencias tienen que acreditarse dentro de las 48 horas; si no, el pedido se cancela. => We accept credit and debit cards, Mercado Pago and bank transfer. Transfers must clear within 48 hours; otherwise, the order is cancelled.
+Envíos => Shipping
+Enviamos a todo el país. Los plazos son estimados y se cuentan en días hábiles desde que se acredita el pago. El riesgo de la pieza pasa a vos cuando la recibís. => We ship nationwide. Times are estimates and are counted in business days from when the payment clears. Risk of the piece passes to you when you receive it.
+Cambios => Exchanges
+Podés cambiar una pieza dentro de los 30 días desde la entrega, sin uso y con su etiqueta. El detalle está en la => You can exchange a piece within 30 days of delivery, unused and with its label. The details are in the
+Según la Ley 24.240 de Defensa del Consumidor, podés revocar la compra dentro de los 10 días corridos desde la entrega, sin costo y sin dar motivos, desde el => Under Consumer Protection Law 24.240, you can cancel the purchase within 10 calendar days of delivery, at no cost and with no reason needed, from the
+Propiedad intelectual => Intellectual property
+La marca TRAMA, las fotos, los textos y el diseño del sitio son de TRAMA o se usan con permiso. No se pueden reproducir sin autorización. => The TRAMA brand, photos, texts and site design belong to TRAMA or are used with permission. They may not be reproduced without authorization.
+Jurisdicción => Jurisdiction
+Estos términos se rigen por las leyes de la República Argentina. Ante cualquier conflicto, son competentes los tribunales ordinarios de la Ciudad Autónoma de Buenos Aires, sin perjuicio de los derechos que te da la ley como consumidor. => These terms are governed by the laws of the Argentine Republic. Any dispute falls under the ordinary courts of the City of Buenos Aires, without prejudice to your rights as a consumer under the law.
+Nombre, mail, teléfono y DNI: para procesar tu pedido y emitir la factura. => Name, email, phone and ID number: to process your order and issue the invoice.
+Dirección: para hacerte llegar el envío. => Address: to deliver your order.
+Mail para el newsletter: solo si te suscribís. => Email for the newsletter: only if you subscribe.
+Los datos de tarjeta los procesa el medio de pago; nosotros no los guardamos. => Card details are processed by the payment provider; we don't store them.
+Base legal => Legal basis
+Usamos tus datos para cumplir el contrato de compra, por obligaciones legales (facturación) y, en el caso del newsletter, con tu consentimiento, que podés retirar cuando quieras. => We use your data to fulfil the purchase contract, for legal obligations (invoicing) and, for the newsletter, with your consent, which you can withdraw anytime.
+Cuánto tiempo los guardamos => How long we keep them
+Los datos de la cuenta, mientras la tengas activa. Los comprobantes de venta, durante el plazo que exige la ley fiscal (10 años). => Account data, while your account is active. Sales receipts, for the period required by tax law (10 years).
+Tus derechos => Your rights
+Según la Ley 25.326 de Protección de Datos Personales, tenés derecho a acceder, rectificar y suprimir tus datos. Podés ejercerlo gratis cada seis meses, o antes si tenés un interés legítimo. => Under Personal Data Protection Law 25.326, you have the right to access, correct and delete your data. You can exercise it free of charge every six months, or sooner if you have a legitimate interest.
+Cómo ejercerlos => How to exercise them
+Escribinos a hola@trama.com.ar (de ejemplo) desde el mail de tu cuenta, o usá las opciones de => Write to us at hola@trama.com.ar (sample) from your account email, or use the options in
+. Te respondemos dentro de los 10 días corridos. => . We reply within 10 calendar days.
+Autoridad de control => Supervisory authority
+La Agencia de Acceso a la Información Pública, como órgano de control de la Ley 25.326, atiende las denuncias y reclamos de quienes consideren afectados sus derechos. => The Agency for Access to Public Information, as the supervisory body for Law 25.326, handles complaints from anyone who believes their rights have been affected.
+Tenés 30 días corridos desde la entrega para pedir un cambio, y 10 días corridos para usar el botón de arrepentimiento. => You have 30 calendar days from delivery to request an exchange, and 10 calendar days to use the withdrawal button.
+Plazos => Time limits
+Condiciones => Conditions
+La pieza tiene que estar sin uso, sin lavar y con su etiqueta. El desgaste a mano es parte del diseño y no se considera una falla. => The piece must be unused, unwashed and have its label. The hand distressing is part of the design and isn't considered a defect.
+Costos => Costs
+El primer cambio de cada pedido es sin cargo. Los siguientes tienen el costo del envío estándar. => The first exchange on each order is free. Further ones cost the standard shipping rate.
+Cómo hacerlo => How to do it
+Iniciá el trámite en => Start the request in
+, elegí las piezas y cómo nos las mandás. Te damos un código y una etiqueta prepaga. => , choose the pieces and how you'll send them. We'll give you a code and a prepaid label.
+Las cookies y el almacenamiento local son pequeños archivos que el sitio guarda en tu navegador para recordar información entre visitas. => Cookies and local storage are small files the site saves in your browser to remember information between visits.
+Guardan tu carrito, tu sesión y tus elecciones del checkout. Sin ellas, la tienda no funciona, así que siempre están activas. => They store your cart, your session and your checkout choices. Without them the shop doesn't work, so they're always on.
+De preferencias => Preference cookies
+Recuerdan tus búsquedas recientes y tu código postal para calcular el envío. => They remember your recent searches and your postal code to estimate shipping.
+De medición => Analytics cookies
+Nos dicen qué páginas se usan más, sin identificarte. En esta tienda de muestra no se envían a ningún servicio externo. => They tell us which pages are used most, without identifying you. In this sample store they aren't sent to any external service.
+Cómo cambiarlas => How to change them
+Podés cambiar tu elección cuando quieras. => You can change your choice anytime.
+En esta página => On this page
+Hecho en Buenos Aires, una pieza a la vez => Made in Buenos Aires, one piece at a time
+Qué es TRAMA => What TRAMA is
+TRAMA nació de mirar cómo se gastan las cosas que más usamos. Hacemos gorras, pilusos y gorros de algodón y lana que salen del taller ya lavados y desgastados, para que se sientan tuyos desde el primer día. => TRAMA was born from watching how the things we use most wear out. We make cotton and wool caps, bucket hats and beanies that leave the workshop already washed and distressed, so they feel like yours from day one.
+Trabajamos con un taller chico en Buenos Aires. Cortamos, cosemos, lavamos y terminamos cada pieza a mano, por eso cada una tiene marcas propias. => We work with a small workshop in Buenos Aires. We cut, sew, wash and finish each piece by hand, which is why each one has its own marks.
+El proceso => The process
+Por qué drops => Why drops
+Producimos poco y por tandas. Cuando una pieza se agota, puede volver con otro color o no volver. => We produce little and in batches. When a piece sells out, it may come back in another color or not at all.
+Ver la colección Archivo 01 => View the Archive 01 collection
+Ver la tienda => View the shop
+Lookbook · Archivo 01 => Lookbook · Archive 01
+Compartí tu pieza en Instagram con #TRAMAenlacalle y aparecé acá. => Share your piece on Instagram with #TRAMAenlacalle and get featured here.
+Esta página no existe => This page doesn't exist
+Puede que el link esté mal o que la página se haya movido. => The link may be wrong or the page may have moved.
+Pasos del cambio => Exchange steps
+Vista previa de la foto => Photo preview
+Vista previa del adjunto => Attachment preview
+Índice => Contents
+Pedidos y envíos => Orders and shipping
+El envío estándar a domicilio tarda de 3 a 6 días hábiles. El express llega en 24 a 48 h hábiles y solo está disponible en AMBA. El retiro en punto de entrega tarda de 3 a 5 días hábiles, y en el showroom de Palermo te avisamos cuando está listo. => Standard home delivery takes 3 to 6 business days. Express arrives in 24 to 48 business hours and is only available in AMBA. Pickup point delivery takes 3 to 5 business days, and for the Palermo showroom we let you know when it's ready.
+¿Cuánto cuesta el envío? => How much does shipping cost?
+El estándar cuesta $4.500, el express $7.900 y el retiro en punto $3.200. Retirar en el showroom no tiene costo. El envío estándar es gratis en compras desde $60.000. => Standard costs $4.500, express $7.900 and pickup point $3.200. Showroom pickup is free. Standard shipping is free on orders from $60.000.
+¿Hacen envíos a todo el país? => Do you ship nationwide?
+Sí, enviamos a todas las provincias. El envío express solo llega a códigos postales de AMBA, del 1000 al 1999. => Yes, we ship to every province. Express only reaches AMBA postal codes, 1000 to 1999.
+¿Puedo cambiar la dirección después de comprar? => Can I change the address after ordering?
+Sí, mientras el pedido esté en “Preparando”. Escribinos con el número de pedido y la dirección nueva. => Yes, while the order is “Preparing”. Write to us with the order number and the new address.
+¿Qué medios de pago aceptan? => Which payment methods do you accept?
+Tarjetas de crédito y débito Visa, Mastercard y American Express, Mercado Pago y transferencia bancaria, que tiene un 10% de descuento. => Visa, Mastercard and American Express credit and debit cards, Mercado Pago and bank transfer, which has a 10% discount.
+Sí, 3 cuotas sin interés con tarjeta de crédito. También podés pagar en 6 cuotas con un recargo del 18%. => Yes, 3 interest-free installments with a credit card. You can also pay in 6 installments with an 18% surcharge.
+¿Por qué rechazaron mi pago? => Why was my payment declined?
+Suele pasar por falta de fondos, un dato mal cargado o el límite de la tarjeta. Revisá los datos o probá con otro medio de pago. Cuando un pago se rechaza, no se hace ningún cargo. => It's usually due to insufficient funds, a mistyped detail or the card limit. Check your details or try another payment method. When a payment is declined, you aren't charged.
+¿Cómo uso un código de descuento? => How do I use a discount code?
+Escribilo en el carrito, en “Código de descuento”, o en el resumen del checkout. Se puede usar un código por compra. => Enter it in the cart, under “Discount code”, or in the checkout summary. One code per purchase.
+Tenés 30 días desde que recibiste el pedido. La pieza tiene que estar sin uso y con su etiqueta. => You have 30 days from receiving the order. The piece must be unused and have its label.
+¿El cambio tiene costo? => Is there a cost to exchange?
+El primer cambio de cada pedido es sin cargo: te damos una etiqueta prepaga para despacharlo en un punto de entrega, o lo podés traer al showroom. => The first exchange on each order is free: we give you a prepaid label to drop it off at a pickup point, or you can bring it to the showroom.
+¿Puedo devolver y que me reintegren el dinero? => Can I return it and get my money back?
+Sí. Podés elegir el reintegro al medio de pago original o crédito en la tienda. El reintegro puede tardar hasta 10 días hábiles en verse en tu resumen. => Yes. You can choose a refund to the original payment method or store credit. The refund can take up to 10 business days to show on your statement.
+¿Qué es el botón de arrepentimiento? => What is the withdrawal button?
+Te permite revocar la compra dentro de los 10 días corridos desde que la recibiste, sin dar motivos y sin costo. => It lets you cancel the purchase within 10 calendar days of receiving it, with no reason needed and at no cost.
+Talles y cuidados => Sizes and care
+¿Cómo sé si me va a quedar? => How do I know if it will fit?
+Medite la cabeza con un centímetro y compará con el rango de cada pieza: la gorra va de 54 a 60 cm y es ajustable, el piluso de 56 a 58 cm y el gorro de 54 a 60 cm, con tejido elástico. En cada ficha tenés la guía de talles con una calculadora. => Measure your head with a tape measure and compare it with each piece's range: the cap goes from 54 to 60 cm and is adjustable, the bucket hat from 56 to 58 cm and the beanie from 54 to 60 cm, in stretch knit. Each product page has a size guide with a calculator.
+Abrir la guía de talles => Open the size guide
+¿Cómo lavo mi gorra? => How do I wash my cap?
+Lavala a mano en agua fría y secala a la sombra, sin escurrir. No uses secarropas. El gorro conviene secarlo en plano para que no se estire. => Hand wash it in cold water and dry it in the shade, without wringing. Don't tumble dry. The beanie is best dried flat so it doesn't stretch.
+¿El desgaste es una falla? => Is the distressing a defect?
+No. Cada pieza se lava y se desgasta a mano, así que las marcas son parte del diseño y no hay dos iguales. => No. Each piece is washed and distressed by hand, so the marks are part of the design and no two are alike.
+Cuenta y datos => Account and data
+¿Necesito una cuenta para comprar? => Do I need an account to buy?
+No. Podés comprar como invitado. Con una cuenta guardás tus direcciones, tus favoritos y ves todos tus pedidos en un solo lugar. => No. You can buy as a guest. With an account you save your addresses and favorites and see all your orders in one place.
+¿Olvidaste tu contraseña? => Forgot your password?
+Pedí un link para crear una contraseña nueva con el mail de tu cuenta. => Request a link to create a new password with your account email.
+¿Cómo elimino mi cuenta? => How do I delete my account?
+Ingresá a Mi cuenta, entrá a Datos personales y usá “Eliminar mi cuenta” al final de la página. => Go to My account, open Personal details and use “Delete my account” at the bottom of the page.
+Ir a Datos personales => Go to Personal details
+Contanos qué te faltó => Tell us what was missing
+Buscá en las preguntas frecuentes => Search the FAQ
+Por ejemplo: cuotas, cambio, envío => For example: installments, exchange, shipping
+Con el número y el mail de la compra. => With the order number and email.
+Hasta 30 días desde la entrega. => Up to 30 days from delivery.
+Hasta 10 días desde la entrega. => Up to 10 days from delivery.
+Respondemos en menos de 24 h hábiles. => We reply within 24 business hours.
+Número de pedido => Order number
+Podés escribirlo con o sin “TR-”. => You can type it with or without “TR-”.
+Mail de la compra => Order email
+Qué querés cambiar => What you want to exchange
+Motivo => Reason
+Me queda grande => Too big
+Me queda chico => Too small
+Quiero otro color => I want another color
+Llegó con una falla => It arrived with a defect
+No es lo que esperaba => Not what I expected
+Todavía no se entregó. => It hasn't been delivered yet.
+Ya tiene un cambio en curso. => It already has an exchange in progress.
+Elegí un motivo => Choose a reason
+Listo, registramos tu cambio => Done, we registered your exchange
+Descargamos la etiqueta de muestra => We downloaded the sample label
+Nombre y apellido => Full name
+Ingresá tu nombre y apellido. => Enter your full name.
+Productos y talles => Products and sizes
+Ventas mayoristas => Wholesale
+Otro => Other
+Elegí el motivo de tu consulta. => Choose the reason for your inquiry.
+Para consultas sobre un pedido o un cambio, escribí el número de pedido. => For questions about an order or an exchange, write the order number.
+Quién vende => Who sells
+Precios y stock => Prices and stock
+Qué datos pedimos y para qué => What data we ask for and why
+Política de cookies => Cookie policy
+Qué son => What they are
+Corte y costura en el taller => Cutting and sewing in the workshop
+Cortamos el algodón y la lana en tandas chicas. Cada pieza se arma y se cose en el taller. => We cut the cotton and wool in small batches. Each piece is assembled and sewn in the workshop.
+Lavado a la piedra en tandas chicas => Stone washed in small batches
+Lavamos las piezas con piedra para ablandar la tela y bajar el color de forma pareja. => We stone wash the pieces to soften the fabric and fade the color evenly.
+Desgaste a mano y bordado => Hand distressing and embroidery
+Gastamos los bordes a mano y bordamos la marca en hilo crudo. Así, no hay dos iguales. => We wear down the edges by hand and embroider the brand in natural thread. That way, no two are alike.
+Página no encontrada => Page not found
+Tienda => Shop
+Nosotros => About
+Ayuda => Help
+Contacto => Contact
+Seguimiento => Tracking
+Lookbook => Lookbook
+Legal => Legal
+Términos => Terms
+Privacidad => Privacy
+Cookies => Cookies
+Inicio => Home
+Gorras => Caps
+Pilusos => Bucket hats
+Gorros => Beanies
+Gorra => Cap
+Piluso => Bucket hat
+Gorro => Beanie
+Agotado => Sold out
+Mail => Email
+Email => Email
+Nombre => First name
+Apellido => Last name
+Teléfono => Phone
+DNI => ID number (DNI)
+Calle => Street
+Número => Number
+Piso / depto. => Floor / apt.
+Piso/Depto => Floor / apt.
+Localidad => City
+Provincia => Province
+Cantidad => Quantity
+Editar => Edit
+Eliminar => Delete
+Quitar => Remove
+Cancelar => Cancel
+Confirmar => Confirm
+Continuar => Continue
+Volver => Back
+Guardar => Save
+Enviar => Send
+Mensaje => Message
+Asunto => Subject
+Copiado => Copied
+Copiamos el código => Code copied
+Preparando => Preparing
+En camino => On the way
+Entregado => Delivered
+Cancelado => Cancelled
+Pendiente de pago => Awaiting payment
+Pago pendiente => Payment pending
+Listo para retirar => Ready for pickup
+Pedido => Order
+Fecha => Date
+Estado => Status
+Detalle => Details
+Factura => Invoice
+Opcional => Optional
+(opcional) => (optional)
+Estándar => Standard
+Express => Express
+Gratis => Free
+Precio => Price
+Descripción => Description
+Materiales => Materials
+Cuidados => Care
+Talle => Size
+Calce => Fit
+Ver todo => View all
+Ver todos => View all
+Ver más => See more
+Ver menos => See less
+Anterior => Previous
+Tu mail => Your email
+Casa · => Home ·
+Trabajo · => Work ·
+Vencimiento (MM/AA) => Expiry (MM/YY)
+Editar datos => Edit details
+Editar envío => Edit shipping
+Editar pago => Edit payment
+Productos => Products
+Producto => Product
+10% off => 10% off
+Código => Code
+Te mandamos un mail apenas vuelva a haber stock de este color. => We'll email you as soon as this color is back in stock.
+Avisame => Notify me
+Datos => Details
+Pago => Payment
+Revisión => Review
+. Si no, seguí como invitado: no hace falta crear una cuenta. => . If not, continue as a guest: you don't need an account.
+Se calcula en el siguiente paso => Calculated in the next step
+Lo usamos para mostrarte las opciones y los plazos. => We use it to show you options and delivery times.
+Piso (opcional) => Floor (optional)
+Depto (opcional) => Apt (optional)
+Indicaciones para el repartidor (opcional) => Delivery instructions (optional)
+Mostrar => Show
+Ocultar => Hide
+Procesando… => Processing…
+Resumen => Summary
+Comunicaciones => Communications
+Newsletter · Drops => Newsletter · Drops
+En curso => In progress
+Entregados => Delivered
+Confirmado => Confirmed
+Casa => Home
+Timbre B => Doorbell B
+Trabajo => Work
+Pagado => Paid
+Enviado => Shipped
+Despachado => Shipped
+Recibido => Received
+Voces => Voices
+Marca => Brand
+Transferencia => Transfer
+Cargando => Loading
+horas => hours
+seg => sec
+Arrastrá para girar => Drag to rotate
+En stock => In stock
+Calcular => Calculate
+100% algodón lavado. Ala corta de 5 cm con bordes deshilachados. Logo bordado al frente. => 100% washed cotton. 5 cm short brim with frayed edges. Logo embroidered on the front.
+Lavar a mano en agua fría. Secar a la sombra, sin escurrir. No usar secarropas. Secar en plano para que no se estire. => Hand wash in cold water. Dry in the shade, without wringing. Do not tumble dry. Dry flat so it doesn't stretch.
+ver => see
+días => days
+Confirmación => Confirmation
+Obligatorio si consultás por un pedido o un cambio. => Required if your question is about an order or an exchange.
+Lucía R., Lanús => Lucía R., Lanús
+Tomás G., Palermo => Tomás G., Palermo
+Siguiente => Next
+`;
+  var D = new Map();
+  RAW.split('\n').forEach(function (l) { var i = l.indexOf(' => '); if (i > 0) D.set(norm(l.slice(0, i)), l.slice(i + 4)); });
+  function norm(s) { return s.replace(/\s+/g, ' ').trim(); }
+
+  var MES = { enero: 'January', febrero: 'February', marzo: 'March', abril: 'April', mayo: 'May', junio: 'June', julio: 'July', agosto: 'August', septiembre: 'September', octubre: 'October', noviembre: 'November', diciembre: 'December' };
+  var DIA = { domingo: 'Sunday', lunes: 'Monday', martes: 'Tuesday', 'miércoles': 'Wednesday', jueves: 'Thursday', viernes: 'Friday', 'sábado': 'Saturday' };
+  var mesRe = '(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)';
+  var diaRe = '(domingo|lunes|martes|miércoles|jueves|viernes|sábado)';
+  var COL = { 'negra': 'black', 'negro': 'black', 'blanca cruda': 'off-white', 'blanco crudo': 'off-white', 'blanca': 'white', 'blanco': 'white', 'gris oscuro': 'dark gray', 'gris': 'gray', 'cruda': 'off-white', 'crudo': 'off-white' };
+  var TYP = { gorra: 'Cap', piluso: 'Bucket Hat', gorro: 'Beanie' };
+  var colRe = '(blanca cruda|blanco crudo|gris oscuro|negra|negro|blanca|blanco|gris|cruda|crudo)';
+
+  // Pattern rules, applied in order anywhere inside a text.
+  var R = [
+    [new RegExp(diaRe + ' (\\d{1,2}) de ' + mesRe, 'g'), function (m, d, n, mo) { return DIA[d] + ', ' + MES[mo] + ' ' + n; }],
+    [new RegExp('(\\d{1,2}) de ' + mesRe + ' de (\\d{4})', 'g'), function (m, n, mo, y) { return MES[mo] + ' ' + n + ', ' + y; }],
+    [new RegExp('(\\d{1,2}) de ' + mesRe, 'g'), function (m, n, mo) { return MES[mo] + ' ' + n; }],
+    [new RegExp('\\b' + diaRe + ' (\\d{1,2})\\b', 'g'), function (m, d, n) { return DIA[d] + ' ' + n; }],
+    [/ a las 19:00 \(hora de Argentina\)/g, ' at 7:00 PM (Argentina time)'],
+    [/Sale el /g, 'Out '],
+    [new RegExp('\\b(Gorra|Piluso|Gorro|gorra|piluso|gorro) Trama ' + colRe + '(?![\\wáéíóúñ])', 'g'), function (m, t, c) { return COL[c] + ' Trama ' + TYP[t.toLowerCase()]; }],
+    [/\b(Gorra|Piluso|Gorro) Trama\b/g, function (m, t) { return 'Trama ' + TYP[t.toLowerCase()]; }],
+    [/Te mandamos un mail apenas vuelva a haber stock de (.+?) en (.+?)\./g, "We'll email you as soon as $1 is back in stock in $2."],
+    [/^Colores de (.+)$/, '$1 colors'],
+    [/Próximo drop TRAMA 02\./g, 'Next drop TRAMA 02.'],
+    [/^Quitar filtro /, 'Remove filter '],
+    [/^Borrar la búsqueda /, 'Delete search '],
+    [/No encontramos nada para “(.+?)”\. Probá con gorra, piluso o gorro\./g, 'Nothing found for “$1”. Try cap, bucket hat or beanie.'],
+    [/No encontramos nada para “(.+?)”\./g, 'Nothing found for “$1”.'],
+    [/Resultados para “/g, 'Results for “'],
+    [/Envío estándar gratis desde/g, 'Free standard shipping from'],
+    [/Envío gratis desde/g, 'Free shipping from'],
+    [/Tu medida está ([\d,.]+) cm por debajo del mínimo \((\d+) cm\)\./g, 'Your measurement is $1 cm below the minimum ($2 cm).'],
+    [/Tu medida supera el máximo de (\d+) cm: puede apretar/g, 'Your measurement is above the $1 cm maximum: it may feel tight'],
+    [/, aunque el tejido cede un poco/g, ', although the knit gives a little'],
+    [/Estás en el límite del rango \((\d+) a (\d+) cm\)\./g, "You're at the edge of the range ($1 to $2 cm)."],
+    [/Entrás en el rango de (\d+) a (\d+) cm\./g, "You're within the $1 to $2 cm range."],
+    [/\. Si estás entre dos medidas, el calce queda más holgado\./g, ". If you're between two sizes, the fit runs looser."],
+    [/: visor 360°\. Arrastrá o usá las flechas para girar\./g, ': 360° viewer. Drag or use the arrow keys to rotate.'],
+    [/, vista 360°/g, ', 360° view'],
+    [/, vista frontal/g, ', front view'],
+    [/Ampliar la foto de la reseña de /g, 'Enlarge review photo by '],
+    [/Ampliar foto: /g, 'Enlarge photo: '],
+    [/(\d+) cuotas sin interés de /g, '$1 interest-free installments of '],
+    [/(\d+) cuotas sin interés/g, '$1 interest-free installments'],
+    [/(\d+) cuotas de /g, '$1 installments of '],
+    [/(\d+) cuotas/g, '$1 installments'],
+    [/ con interés, total /g, ' with interest, total '],
+    [/sin interés/g, 'interest-free'],
+    [/Basado en (\d+) reseñas?/g, 'Based on $1 reviews'],
+    [/\b(\d+) reseñas\b/g, '$1 reviews'], [/\b1 reseña\b/g, '1 review'],
+    [/\b(\d+) productos\b/g, '$1 products'], [/\b1 producto\b/g, '1 product'],
+    [/\b(\d+) piezas\b/g, '$1 pieces'], [/\b1 pieza\b/g, '1 piece'],
+    [/\b(\d+) resultados\b/g, '$1 results'], [/\b1 resultado\b/g, '1 result'],
+    [/\b(\d+) unidades\b/g, '$1 units'], [/\b1 unidad\b/g, '1 unit'],
+    [/\b(\d+) días hábiles\b/g, '$1 business days'], [/\b(\d+) a (\d+) días hábiles\b/g, '$1 to $2 business days'],
+    [/(\d+) a (\d+) h hábiles/g, '$1 to $2 business hours'],
+    [/Quitar el código /g, 'Remove code '],
+    [/Solo quedan (\d+)\. Ajustamos la cantidad\./g, 'Only $1 left. We adjusted the quantity.'],
+    [/Restar una unidad de /g, 'Remove one unit of '],
+    [/Sumar una unidad de /g, 'Add one unit of '],
+    [/^Quitar (.+) del carrito$/, 'Remove $1 from cart'],
+    [/Ver resumen · /g, 'View summary · '],
+    [/Compraste con la sesión de (.+?)\. Podés editar los datos\./g, "You're checking out as $1. You can edit your details."],
+    [/ terminada en /g, ' ending in '],
+    [/Entrega estimada: /g, 'Estimated delivery: '],
+    [/Confirmar compra · /g, 'Place order · '],
+    [/Confirmar compra/g, 'Place order'],
+    [/^La (.+?) se agotó mientras comprabas\.$/, 'The $1 sold out while you were shopping.'],
+    [/Gracias, (.+?)\. Tu pedido está confirmado\./g, 'Thanks, $1. Your order is confirmed.'],
+    [/Te mandamos el detalle a (.+?)\./g, 'We sent the details to $1.'],
+    [/Último pedido · /g, 'Latest order · '],
+    [/Ver detalle del pedido /g, 'View order details '],
+    [/El plazo de cambio también venció el /g, 'The exchange window also ended on '],
+    [/El plazo de cambio venció el /g, 'The exchange window ended on '],
+    [/El plazo de arrepentimiento para este pedido venció el /g, 'The withdrawal window for this order ended on '],
+    [/^Editar la dirección /, 'Edit address '], [/^Eliminar la dirección /, 'Delete address '],
+    [/^¿Eliminar la dirección (.+?)\?$/, 'Delete address $1?'], [/^¿Eliminar la dirección /, 'Delete address '],
+    [/Eliminaste la dirección /g, 'You deleted address '],
+    [/^Usar (.+) como predeterminada$/, 'Set $1 as default'],
+    [/Lo pediste el /g, 'Requested on '],
+    [/Quitar el aviso de /g, 'Remove alert for '],
+    [/ · ahora en /g, ' · now in '],
+    [/Ver el pedido /g, 'View order '],
+    [/Este pedido no admite cambio\. /g, "This order can't be exchanged. "],
+    [/Recibimos tu mensaje\. Te respondemos en menos de 24 horas hábiles a (.+?)\./g, "We got your message. We'll reply to $1 within 24 business hours."],
+    [/Última actualización: /g, 'Last updated: '],
+    [/Ver en pantalla completa: /g, 'View full screen: '],
+    [/^Foto de (.+) con una pieza TRAMA$/, 'Photo of $1 wearing a TRAMA piece'],
+    [/Agotado en /g, 'Sold out in '], [/Quedan pocas en /g, 'Only a few left in '],
+    [/ está agotada\./g, ' is sold out.'], [/ está agotado\./g, ' is sold out.'],
+    [/Esa es toda la cantidad disponible en /g, "That's all we have in "],
+    [/[Ll]isto para retirar desde el /g, 'Ready for pickup from '],
+    [/Llega entre el /g, 'Arrives between '], [/Disponible entre el /g, 'Available between '], [/[Ee]ntre el /g, 'between '],
+    [/ y el /g, ' and '],
+    [/Revisá (\d+) campos antes de seguir:/g, 'Check $1 fields before continuing:'],
+    [/ avisos activos/g, ' active alerts'], [/ aviso activo/g, ' active alert'],
+    [/Entregado el /g, 'Delivered on '], [/Llega el /g, 'Arrives on '], [/Sin stock: /g, 'Out of stock: '],
+    [/Traela al showroom antes del /g, 'Bring it to the showroom by '], [/Llevala al punto antes del /g, 'Take it to the drop-off point by '],
+    [/Aplicamos el código /g, 'Code applied: '],
+    [/Te faltan (.+?) para el envío gratis/g, "You're $1 away from free shipping"],
+    [/ para el envío gratis/g, ' away from free shipping'],
+    [/^Carrito \((\d+)\)$/, 'Cart ($1)'], [/^Carrito (\d+)$/, 'Cart $1'], [/^CARRITO/, 'CART'],
+    [/^Carrito, (\d+) productos?$/, 'Cart, $1 items'],
+    [/Hola, /g, 'Hi, '],
+    [/^(\d+) de (\d+): /, '$1 of $2: '],
+    [/(\d) de 5 estrellas/g, '$1 out of 5 stars'], [/\b1 estrellas?\b/g, '1 star'], [/(\d) estrellas/g, '$1 stars'],
+    [/Paso (\d+) de (\d+)/g, 'Step $1 of $2'], [/^Paso (\d+):/, 'Step $1:'], [/^Paso (\d+)/, 'Step $1'],
+    [/CARRITO/g, 'CART'],
+    [/^Sí \((\d+)\)$/, 'Yes ($1)'], [/^No \((\d+)\)$/, 'No ($1)'],
+    [/\b1 pago de /g, '1 payment of '], [/\b(\d+) pagos de /g, '$1 payments of '], [/\b1 pago\b/g, '1 payment'],
+    [/^Crédito, /, 'Credit, '], [/^Débito, /, 'Debit, '], [/^Débito$/, 'Debit'],
+    [/^Hoy, /, 'Today, '], [/^Ayer, /, 'Yesterday, '], [/^Hoy$/, 'Today'], [/^Mañana$/, 'Tomorrow'],
+    [/\b(\d+) pedidos\b/g, '$1 orders'], [/\b1 pedido\b/g, '1 order'],
+    [/\b(\d+) favoritos\b/g, '$1 favorites'], [/\b1 favorito\b/g, '1 favorite'],
+    [/\b(\d+) guardadas\b/g, '$1 saved'], [/\b1 guardada\b/g, '1 saved'],
+    [/, piso (\w+)/g, ', floor $1'], [/Ciudad Autónoma de Buenos Aires/g, 'City of Buenos Aires'],
+    [/^Favoritos \((\d+)\)$/, 'Favorites ($1)'],
+    [/caracteres · mínimo (\d+)/g, 'characters · minimum $1'], [/ caracteres/g, ' characters'],
+    [/Pedido /g, 'Order '],
+    [/ de (\d+)$/g, ' of $1'],
+    [/Talle /g, 'Size ']
+  ];
+  var cache = new Map(), MISS = window.__trMiss = new Set();
+  function cap(src, out) { var a = src.charAt(0); return a && a === a.toUpperCase() && a !== a.toLowerCase() ? out.charAt(0).toUpperCase() + out.slice(1) : out; }
+  function tr(s) {
+    var k = norm(s); if (!k) return s;
+    if (cache.has(k)) { var c = cache.get(k); return c == null ? s : wrap(s, c); }
+    var out = D.get(k);
+    if (out == null) {
+      var t = k;
+      for (var i = 0; i < R.length; i++) t = t.replace(R[i][0], R[i][1]);
+      // remaining exact sub-phrases split by separators
+      t = t.split(/( · | — |: )/).map(function (p) { return D.has(p) ? D.get(p) : p; }).join('');
+      if (/[áéíóúñ¿¡]|\b(de|en|con|para|tu|tus|el|la|los|las)\b/i.test(t)) t = t.replace(/(^|[^\p{L}])(blanca cruda|blanco crudo|gris oscuro|negra|negro|blanca|blanco|gris|cruda|crudo|gorras|pilusos|gorros|gorra|piluso|gorro)(?![\p{L}])/giu, function (m, pre, w) { var lw = w.toLowerCase(), r = COL[lw] || ({ gorras: 'caps', pilusos: 'bucket hats', gorros: 'beanies', gorra: 'cap', piluso: 'bucket hat', gorro: 'beanie' })[lw]; return pre + cap(w, r); });
+      else t = t.replace(/(^|[^\p{L}])(blanca cruda|blanco crudo|gris oscuro|negra|negro|blanca|blanco|gris|cruda|crudo)(?![\p{L}])/giu, function (m, pre, w) { return pre + cap(w, COL[w.toLowerCase()]); });
+      out = t !== k ? cap(k, t) : null;
+    }
+    cache.set(k, out); if (out == null) MISS.add(k);
+    return out == null ? s : wrap(s, out);
+  }
+  function wrap(s, out) { var m = s.match(/^\s*/)[0], n = s.match(/\s*$/)[0]; return m + out + n; }
+  window.TRAMA_tr = function (s) { return lang === 'en' ? tr(String(s)) : s; };
+  window.TRAMA_lang = function () { return lang; };
+
+  var ATTRS = ['aria-label', 'placeholder', 'title', 'alt'];
+  var TX = new WeakMap(), AT = new WeakMap();
+  function skip(el) { return !el || el.closest && el.closest('script,style,noscript,textarea,[data-noi18n]'); }
+  function doText(n) {
+    if (skip(n.parentElement)) return;
+    var v = n.nodeValue, r = TX.get(n);
+    if (r && v === r.t) return;
+    if (!/[A-Za-zÁÉÍÓÚáéíóúñÑ]/.test(v)) return;
+    var t = tr(v); TX.set(n, { o: v, t: t }); if (t !== v) n.nodeValue = t;
+  }
+  function doAttr(el, a) {
+    if (skip(el)) return;
+    var v = el.getAttribute(a); if (v == null) return;
+    var m = AT.get(el); if (!m) { m = {}; AT.set(el, m); }
+    if (m[a] && m[a].t === v) return;
+    var t = tr(v); m[a] = { o: v, t: t }; if (t !== v) el.setAttribute(a, t);
+  }
+  function walk(root) {
+    if (!root) return;
+    if (root.nodeType === 3) { doText(root); return; }
+    if (root.nodeType !== 1 && root.nodeType !== 9) return;
+    if (root.nodeType === 1) { if (skip(root)) return; ATTRS.forEach(function (a) { if (root.hasAttribute(a)) doAttr(root, a); }); }
+    var w = document.createTreeWalker(root, 5, null), n;
+    while ((n = w.nextNode())) { if (n.nodeType === 3) doText(n); else ATTRS.forEach(function (a) { if (n.hasAttribute(a)) doAttr(n, a); }); }
+  }
+  function restore(root) {
+    var w = document.createTreeWalker(root, 5, null), n;
+    while ((n = w.nextNode())) {
+      if (n.nodeType === 3) { var r = TX.get(n); if (r && n.nodeValue === r.t) n.nodeValue = r.o; TX.delete(n); }
+      else { var m = AT.get(n); if (m) { for (var a in m) if (n.getAttribute(a) === m[a].t) n.setAttribute(a, m[a].o); AT.delete(n); } }
+    }
+  }
+  var mo = new MutationObserver(function (list) {
+    if (lang !== 'en') return;
+    for (var i = 0; i < list.length; i++) {
+      var m = list[i];
+      if (m.type === 'characterData') doText(m.target);
+      else if (m.type === 'attributes') doAttr(m.target, m.attributeName);
+      else for (var j = 0; j < m.addedNodes.length; j++) walk(m.addedNodes[j]);
+    }
+  });
+  mo.observe(document.documentElement, { subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: ATTRS });
+
+  function syncToggle() {
+    document.documentElement.lang = lang === 'en' ? 'en' : 'es-AR';
+    var bs = document.querySelectorAll('[data-lang-toggle]');
+    for (var i = 0; i < bs.length; i++) {
+      bs[i].setAttribute('data-noi18n', '');
+      bs[i].textContent = lang === 'en' ? 'ES' : 'EN';
+      bs[i].setAttribute('aria-label', lang === 'en' ? 'Ver el sitio en español' : 'View the site in English');
+      bs[i].setAttribute('lang', lang === 'en' ? 'es' : 'en');
+    }
+  }
+  function setLang(l) {
+    lang = l; try { localStorage.setItem(KEY, l); } catch (e) {}
+    location.reload(); return;
+    window.dispatchEvent(new CustomEvent('trama:lang', { detail: l }));
+  }
+  window.TRAMA_setLang = setLang;
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-lang-toggle]'); if (!b) return;
+    e.preventDefault(); setLang(lang === 'en' ? 'es' : 'en');
+  });
+  new MutationObserver(function () { var b = document.querySelector('[data-lang-toggle]'); if (b && b.textContent !== (lang === 'en' ? 'ES' : 'EN')) syncToggle(); }).observe(document.documentElement, { subtree: true, childList: true });
+
+  ['alert', 'confirm', 'prompt'].forEach(function (f) { var o = window[f]; if (o) window[f] = function (m) { var a = [].slice.call(arguments); if (lang === 'en' && typeof m === 'string') a[0] = m.split('\n').map(tr).join('\n'); return o.apply(window, a); }; });
+  var OB = window.Blob;
+  if (OB) { var NB = function (parts, opt) { if (lang === 'en' && opt && /^text\//.test(opt.type || '') && parts) parts = parts.map(function (p) { return typeof p === 'string' ? p.split('\n').map(tr).join('\n') : p; }); return new OB(parts, opt); }; NB.prototype = OB.prototype; window.Blob = NB; }
+
+  function init() { syncToggle(); if (lang === 'en') walk(document.documentElement); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+  document.documentElement.lang = lang === 'en' ? 'en' : 'es-AR';
+})();
+
+</script>
 <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="TRAMA — Gorras, pilusos y gorros">
-<meta property="og:description" content="Gorras, pilusos y gorros lavados y desgastados a mano en Buenos Aires. Proyecto de portfolio.">
+<meta property="og:title" content="TRAMA — Caps, bucket hats and beanies">
+<meta property="og:description" content="Caps, bucket hats and beanies washed and distressed by hand in Buenos Aires. Portfolio project.">
 <meta property="og:image" content="assets/img/Gorra_negra_16-9.jpg">
 <meta property="og:image:width" content="1920">
 <meta property="og:image:height" content="1072">
-<meta property="og:locale" content="es_AR">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_AR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="TRAMA — Gorras, pilusos y gorros">
-<meta name="twitter:description" content="Gorras, pilusos y gorros lavados y desgastados a mano en Buenos Aires. Proyecto de portfolio.">
+<meta name="twitter:title" content="TRAMA — Caps, bucket hats and beanies">
+<meta name="twitter:description" content="Caps, bucket hats and beanies washed and distressed by hand in Buenos Aires. Portfolio project.">
 <meta name="twitter:image" content="assets/img/Gorra_negra_16-9.jpg">
 <style>
 /* TRAMA store — capa de páginas y overlays. Prefijos: ui- (comunes), shop-, pdp-, co-, acc-, help-, legal-, brand- */
@@ -2533,7 +3561,7 @@ select.ui-input option{background:#000;color:#fff}
 <body>
 <x-dc>
 <helmet>
-<title>TRAMA — Gorras, pilusos y gorros</title>
+<title>TRAMA — Caps, bucket hats and beanies</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@600&amp;family=Schibsted+Grotesk:wght@500&amp;display=swap">
@@ -3686,7 +4714,8 @@ T.openMenu = () => {
       <li><a href="#/favoritos" data-count="favtext">Favoritos (${f})</a></li>
       <li><a href="#/cuenta">${s ? 'Mi cuenta' : 'Ingresar'}</a></li>
       <li><a href="#/seguimiento">Seguir mi pedido</a></li>
-      <li><a href="#/arrepentimiento">Botón de arrepentimiento</a></li></ul>
+      <li><a href="#/arrepentimiento">Botón de arrepentimiento</a></li>
+      <li><button type="button" class="ui-tbtn" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1.5px solid currentColor;border-radius:50%;font-size:14px;letter-spacing:0" data-lang-toggle>EN</button></li></ul>
     <div class="ui-menu-foot"><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/5491100000000" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:hola@trama.com.ar">hola@trama.com.ar</a></div>
   </div></aside>`;
   document.body.appendChild(el);
